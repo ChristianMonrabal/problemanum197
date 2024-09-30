@@ -56,11 +56,7 @@ function encryptStageXII(text) {
     return leftPart + rightPart;
 }
 
-/**
- * PROCESO DE DESENCRIPTACIÓN
- * 
- * Función para transformar el texto final (X'') de vuelta al texto intermedio (X').
- */
+/* PROCESO DE DESENCRIPTACIÓN  Función para transformar el texto final (X'') de vuelta al texto intermedio (X').*/
 function decryptStageXII(text) {
     // Desencripta de X'' a X'
     let length = text.length;
