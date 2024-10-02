@@ -1,4 +1,4 @@
-# Problema número 197
+# Problema197
 
 Desarrollado por **Christian Monrabal** y **Juan Carlos Prado** - DAW 2
 
