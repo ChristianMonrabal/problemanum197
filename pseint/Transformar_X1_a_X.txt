@@ -1,0 +1,40 @@
+Algoritmo Transformar_X1_a_X
+    // Inicializar variables
+    TextoResultado <- ''
+    Vocales <- 'aeiouAEIOU'
+    EsVocal <- Falso
+    LongitudTexto <- 0
+    // Solicitar el texto a transformar
+    Escribir 'Introduce el texto transformado en X1 para revertir a X:'
+    Leer Texto
+    LongitudTexto <- Longitud(Texto)
+    i <- 1
+    // Recorrer todo el texto carácter por carácter
+    Mientras i<=LongitudTexto Hacer
+        Car <- SubCadena(Texto,i,1)
+        // Comprobar si el carácter es una vocal
+        Si (Car,Vocales)>0 Entonces
+            EsVocal <- Verdadero
+            // Si es vocal, localizamos el siguiente trozo de texto que contiene otra vocal
+            J <- i+1
+            Mientras J<=LongitudTexto Y (SubCadena(Texto,J,1),Vocales)=0 Hacer
+                J <- J+1
+            FinMientras
+            // Localizamos el trozo de texto entre vocales
+            SubTexto <- SubCadena(Texto,i,J-i+1)
+            // Invertimos el proceso de rotación
+            TextoInvertido <- SubCadena(SubTexto,Longitud(SubTexto),1)+SubCadena(SubTexto,1,Longitud(SubTexto)-1)
+            // Sumamos el texto invertido al resultado
+            TextoResultado <- TextoResultado+TextoInvertido
+            // Actualizamos "i" para saltar el trozo ya procesado
+            i <- J
+        SiNo
+            // Si no es vocal, añadimos el carácter normal
+            TextoResultado <- TextoResultado+Car
+        FinSi
+        // Continuamos el recorrido del texto
+        i <- i+1
+    FinMientras
+    // Imprimir el texto resultante
+    Escribir 'Texto transformado de X1 a X: ', TextoResultado
+FinAlgoritmo

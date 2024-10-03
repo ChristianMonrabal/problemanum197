@@ -1,0 +1,25 @@
+Algoritmo TransformarX1aX2
+    Definir texto, texto_final Como Cadena
+    Definir tamano Como Entero
+    // Recoger el texto
+    Escribir 'Ingrese el texto a transformar: '
+    Leer texto
+    // Inicializamos texto_final como una cadena vacía
+    texto_final <- ''
+    // Mientras el tamaño del texto sea mayor a 0
+    Mientras Longitud(texto)>0 Hacer
+        // Añadir el primer carácter de texto a texto_final
+        texto_final <- texto_final+SubCadena(texto,1,1)
+        // Eliminar el primer carácter de texto
+        texto <- SubCadena(texto,2,Longitud(texto))
+        // Si el tamaño del texto aún es mayor a 0
+        Si Longitud(texto)>0 Entonces
+            // Añadir el último carácter de texto a texto_final
+            // Eliminar el último carácter de texto
+            texto_final <- texto_final+SubCadena(texto,Longitud(texto),Longitud(texto))
+            texto <- SubCadena(texto,1,Longitud(texto)-1)
+        FinSi
+    FinMientras
+    // Devolver el texto_final
+    Escribir 'El texto transformado es: ', texto_final
+FinAlgoritmo
