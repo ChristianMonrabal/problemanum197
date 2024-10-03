@@ -33,11 +33,13 @@ function transformTextX($text) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['action'] === 'decrypt') {
-    $encryptedXII = $_POST['text-desencriptar'];
+    $encryptedXII = $_POST['text-desencriptar']; 
+    
     $decryptedXI = decryptStageXII($encryptedXII);
+    
     $plainText = transformTextX($decryptedXI);
     
-    header("Location: ../index.php?decryptedXI=" . urlencode($decryptedXI) . "&decryptedText=" . urlencode($plainText));
+    header("Location: ../index.php?decryptedXI=" . urlencode($decryptedXI) . "&decryptedText=" . urlencode($plainText) . "&encryptedText=" . urlencode($encryptedXII));
     exit();
 }
 ?>

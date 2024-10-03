@@ -13,15 +13,15 @@
         <div class="column-2">
             <h4>Desencriptar</h4>
             <form action="./php/process.php" method="POST">
-                <input type="text" name="text-desencriptar" placeholder="Introduce el texto X''" required>
+                <input type="text" name="text-desencriptar" placeholder="Introduce el texto X''" value="<?php echo isset($_GET['encryptedText']) ? htmlspecialchars($_GET['encryptedText']) : ''; ?>" required>
                 <input type="hidden" name="action" value="decrypt">
                 <button type="submit">Desencriptar</button>
             </form><br><br>
+
             <?php
             if (isset($_GET['decryptedXI']) && isset($_GET['decryptedText'])) {
                 $decryptedXI = htmlspecialchars($_GET['decryptedXI']);
                 $decryptedText = htmlspecialchars($_GET['decryptedText']);
-                echo "<h4>Resultado de Desencriptación:</h4>";
                 echo "<b>x' =></b> <p>$decryptedXI</p>";
                 echo "<b>x =></b> <p>$decryptedText</p>";
             }
