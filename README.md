@@ -20,6 +20,9 @@ El texto inicial encriptado, denominado **X''**, se somete a una transformación
    - Los caracteres en posiciones impares, leídos en orden inverso, forman la "mitad derecha".
    - Combinamos ambas mitades para formar el texto **X'**.
 
+- **Diagrama de flujo sobre su logica**
+
+
 ### 2. Transformación de X' a X
 
 Una vez que tenemos el texto intermedio **X'**, lo convertimos en el texto original **X** mediante los siguientes pasos:
@@ -32,6 +35,9 @@ Una vez que tenemos el texto intermedio **X'**, lo convertimos en el texto origi
    
 - **Obtención del texto original (X):** 
    - Después de revertir los bloques de consonantes entre vocales, obtenemos el texto desencriptado original **X**.
+
+- **Diagrama de flujo sobre su logica**
+
 
 ## Ejemplo de Desencriptación
 
