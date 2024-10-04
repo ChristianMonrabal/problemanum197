@@ -8,6 +8,10 @@
     <link rel="shortcut icon" href="./src/icon.png" type="image/x-icon">
 </head>
 <body>
+    <div class="top-buttons">
+        <button onclick="window.location.href='./views/X2_to_X1.php'">X2 => X1</button>
+        <button onclick="window.location.href='./views/X1_to_X.php'">X1 => X</button>
+    </div>
     <h3>Problema 197</h3>
     <div class="container">
         <div class="column-2">

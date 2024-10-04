@@ -56,6 +56,10 @@ Aquí se muestra un ejemplo del proceso de desencriptación paso a paso:
 
 Este proceso garantiza que un texto encriptado pueda ser restaurado a su forma original de manera eficiente, siguiendo una serie de reglas lógicas bien definidas.
 
+- **Diagrama de flujo sobre su logica:**
+  
+![Desencriptación de X'' a X' a X](https://raw.githubusercontent.com/ChristianMonrabal/problemanum197/refs/heads/main/img/X2_X1_X.png)
+
 ## Uso del Proyecto
 
 Este proyecto incluye un formulario en la interfaz de usuario para introducir el texto encriptado **X''**. Al hacer clic en "Desencriptar", el sistema aplica las reglas mencionadas y muestra tanto el texto intermedio **X'** como el texto original **X**.
