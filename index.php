@@ -6,6 +6,7 @@
     <title>Problema 197</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="shortcut icon" href="./img/icon.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="./src/icon.png" type="image/x-icon">
 </head>
 <body>
     <h3>Problema 197</h3>
