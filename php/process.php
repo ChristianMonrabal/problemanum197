@@ -24,18 +24,15 @@ function decryptCombined($text) {
         }
     }
 
-    return [
-        'decryptedXI' => $decryptedXI,
-        'plainText' => $result . strrev($buffer)
-    ];
+    return $result . strrev($buffer);
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['action'] === 'decrypt') {
     $encryptedXII = $_POST['text-desencriptar']; 
     
-    $decryptionResult = decryptCombined($encryptedXII);
+    $plainText = decryptCombined($encryptedXII);
     
-    header("Location: ../index.php?decryptedXI=" . urlencode($decryptionResult['decryptedXI']) . "&decryptedText=" . urlencode($decryptionResult['plainText']) . "&encryptedText=" . urlencode($encryptedXII));
+    header("Location: ../index.php?decryptedText=" . urlencode($plainText) . "&encryptedText=" . urlencode($encryptedXII));
     exit();
 }
 ?>

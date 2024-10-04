@@ -24,10 +24,8 @@
             <br>
             <br>
             <?php
-            if (isset($_GET['decryptedXI']) && isset($_GET['decryptedText'])) {
-                $decryptedXI = htmlspecialchars($_GET['decryptedXI']);
+            if (isset($_GET['decryptedText'])) {
                 $decryptedText = htmlspecialchars($_GET['decryptedText']);
-                echo "<b>x' =></b> <p>$decryptedXI</p>";
                 echo "<b>x =></b> <p>$decryptedText</p>";
             }
             ?>
