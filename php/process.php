@@ -1,25 +1,21 @@
 <?php
 
-// Función para desencriptar X'' a X'
-function decryptStageXII($text) {
+function decryptCombined($text) {
     $leftPart = '';
     $rightPart = '';
-
+    
     for ($i = 0; $i < strlen($text); $i++) {
         ($i % 2 === 0) ? $leftPart .= $text[$i] : $rightPart = $text[$i] . $rightPart;
     }
 
-    return $leftPart . $rightPart;
-}
+    $decryptedXI = $leftPart . $rightPart;
 
-// Función para desencriptar de X' a X
-function transformTextX($text) {
     $vowels = ['a', 'e', 'i', 'o', 'u'];
     $result = '';
     $buffer = '';
 
-    for ($i = 0; $i < strlen($text); $i++) {
-        $char = $text[$i];
+    for ($i = 0; $i < strlen($decryptedXI); $i++) {
+        $char = $decryptedXI[$i];
         if (in_array(strtolower($char), $vowels)) {
             $result .= strrev($buffer) . $char;
             $buffer = '';
@@ -28,17 +24,18 @@ function transformTextX($text) {
         }
     }
 
-    return $result . strrev($buffer);
+    return [
+        'decryptedXI' => $decryptedXI,
+        'plainText' => $result . strrev($buffer)
+    ];
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['action'] === 'decrypt') {
     $encryptedXII = $_POST['text-desencriptar']; 
     
-    $decryptedXI = decryptStageXII($encryptedXII);
+    $decryptionResult = decryptCombined($encryptedXII);
     
-    $plainText = transformTextX($decryptedXI);
-    
-    header("Location: ../index.php?decryptedXI=" . urlencode($decryptedXI) . "&decryptedText=" . urlencode($plainText) . "&encryptedText=" . urlencode($encryptedXII));
+    header("Location: ../index.php?decryptedXI=" . urlencode($decryptionResult['decryptedXI']) . "&decryptedText=" . urlencode($decryptionResult['plainText']) . "&encryptedText=" . urlencode($encryptedXII));
     exit();
 }
 ?>
