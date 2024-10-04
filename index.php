@@ -16,8 +16,9 @@
                 <input type="text" name="text-desencriptar" placeholder="Introduce el texto X''" value="<?php echo isset($_GET['encryptedText']) ? htmlspecialchars($_GET['encryptedText']) : ''; ?>" required>
                 <input type="hidden" name="action" value="decrypt">
                 <button type="submit">Desencriptar</button>
-            </form><br><br>
-
+            </form>
+            <br>
+            <br>
             <?php
             if (isset($_GET['decryptedXI']) && isset($_GET['decryptedText'])) {
                 $decryptedXI = htmlspecialchars($_GET['decryptedXI']);

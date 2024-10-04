@@ -5,7 +5,6 @@ function decryptStageXII($text) {
     $leftPart = '';
     $rightPart = '';
 
-    // Dividir el texto en dos partes
     for ($i = 0; $i < strlen($text); $i++) {
         ($i % 2 === 0) ? $leftPart .= $text[$i] : $rightPart = $text[$i] . $rightPart;
     }
