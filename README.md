@@ -20,7 +20,8 @@ El texto inicial encriptado, denominado **X''**, se somete a una transformación
    - Los caracteres en posiciones impares, leídos en orden inverso, forman la "mitad derecha".
    - Combinamos ambas mitades para formar el texto **X'**.
 
-- **Diagrama de flujo sobre su logica**
+- **Diagrama de flujo sobre su logica:**
+  
 ![Desencriptación de X'' a X'](https://raw.githubusercontent.com/ChristianMonrabal/problemanum197/refs/heads/main/img/X2_X1.png)
 
 ### 2. Transformación de X' a X
@@ -36,7 +37,8 @@ Una vez que tenemos el texto intermedio **X'**, lo convertimos en el texto origi
 - **Obtención del texto original (X):** 
    - Después de revertir los bloques de consonantes entre vocales, obtenemos el texto desencriptado original **X**.
 
-- **Diagrama de flujo sobre su logica**
+- **Diagrama de flujo sobre su logica:**
+  
 ![Desencriptación de X'' a X'](https://raw.githubusercontent.com/ChristianMonrabal/problemanum197/refs/heads/main/img/X1_X.png)
 
 ## Ejemplo de Desencriptación
