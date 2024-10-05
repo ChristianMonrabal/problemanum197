@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="top-buttons">
-        <button onclick="window.location.href='../index.php'">index</button>
+        <button onclick="window.location.href='../index.php'">Inicio</button>
         <button onclick="window.location.href='./X1_to_X.php'">X1 => X</button>
     </div>
     <h3>X2 a X1</h3>
