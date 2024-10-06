@@ -18,7 +18,7 @@ function transformTextX($text) {
     return $result . strrev($buffer);
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['action'] === 'decrypt') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $encryptedX1 = $_POST['text-encriptado'];
     $decryptedX = transformTextX($encryptedX1);
     

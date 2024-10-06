@@ -18,7 +18,6 @@
             <h4>Desencriptar X1</h4>
             <form action="../php/X1_X.php" method="POST">
                 <input type="text" name="text-encriptado" placeholder="Introduce el texto X1" value="<?php echo isset($_GET['text-encriptado']) ? htmlspecialchars($_GET['text-encriptado']) : ''; ?>" required>
-                <input type="hidden" name="action" value="decrypt">
                 <button type="submit">Desencriptar</button>
             </form>
             <br>

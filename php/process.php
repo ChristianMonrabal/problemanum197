@@ -27,7 +27,7 @@ function decryptCombined($text) {
     return $result . strrev($buffer);
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['action'] === 'decrypt') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $encryptedXII = $_POST['text-desencriptar']; 
     
     $plainText = decryptCombined($encryptedXII);
